@@ -3,6 +3,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
+  
   try {
     const upstream = await fetch("https://api.openai.com/v1/responses", {
       method: "POST",
